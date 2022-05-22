@@ -27,7 +27,7 @@ The purpose of this study is to analyse and train the voice signals, extract the
  ![enter image description here](/static/assets/img/4.jpeg)
 
 ## source
- ![enter image description here](static\assets\img\source.png)
+ ![enter image description here](/static/assets/img/source.png)
 
 ## Dataset Information
 This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for PD. The data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are around six recordings per patient, the name of the patient is identified in the first column.For further information or to pass on comments, please contact Max Little (littlem '@' robots.ox.ac.uk). Further details are contained in the following reference -- if you use this dataset, please cite: Max A. Little, Patrick E. McSharry, Eric J. Hunter, Lorraine O. Ramig (2008), 'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', IEEE Transactions on Biomedical Engineering (to appear).
@@ -35,23 +35,20 @@ This dataset is composed of a range of biomedical voice measurements from 31 peo
 ## Attribute Information
 The dataset contains 22 features extracted from 31 people, of which 23 suffered from PD. As shown in Table 1, each column denotes a particular voice feature, and each row corresponds to one of 195 voice recordings from these individuals. The dataset was created by Max Little of the University of Oxford in collaboration with the National Centre for Voice and Speech, Denver, Colorado.
 
- ![enter image description here](static\assets\img\3.png)
+ ![enter image description here](/static/assets/img/3.png)
 
 ## ABOUT THE PROJECT
- ![enter image description here](static\assets\img\about.png)
+ ![enter image description here](/static/assets/img/about.png)
 
 ## TEAM
- ![enter image description here](static\assets\img\demo\3.png)
-
-## ABOUT THE PROJECT
- ![enter image description here](static\assets\img\about.png)
+ ![enter image description here](/static/assets/img/demo/3.png)
 
 ## DEMO
- ![enter image description here](static\assets\img\demo\1.png)
- ![enter image description here](static\assets\img\demo\2.png)
- ![enter image description here](static\assets\img\demo\4.png)
- ![enter image description here](static\assets\img\demo\5.png)
- ![enter image description here](static\assets\img\demo\6.png)
- ![enter image description here](static\assets\img\demo\7.png)
- ![enter image description here](static\assets\img\demo\8.png)
+ ![enter image description here](/static/assets/img/demo/1.png)
+ ![enter image description here](/static/assets/img/demo/2.png)
+ ![enter image description here](/static/assets/img/demo/4.png)
+ ![enter image description here](/static/assets/img/demo/5.png)
+ ![enter image description here](/static/assets/img/demo/6.png)
+ ![enter image description here](/static/assets/img/demo/7.png)
+ ![enter image description here](/static/assets/img/demo/8.png)
 
