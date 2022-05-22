@@ -24,7 +24,7 @@ The purpose of this study is to analyse and train the voice signals, extract the
 
 
 ## Architecture du système
- ![enter image description here](static\assets\img\4.jpeg)
+ ![enter image description here](\static\assets\img\4.jpeg)
 
 ## source
  ![enter image description here](static\assets\img\source.png)
