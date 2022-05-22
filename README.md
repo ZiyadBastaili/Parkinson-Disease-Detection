@@ -44,6 +44,7 @@ The dataset contains 22 features extracted from 31 people, of which 23 suffered 
  ![enter image description here](/static/assets/img/demo/3.PNG)
 
 ## DEMO
+ ![enter image description here](/static/assets/img/demo/9.PNG)
  ![enter image description here](/static/assets/img/demo/1.PNG)
  ![enter image description here](/static/assets/img/demo/2.PNG)
  ![enter image description here](/static/assets/img/demo/4.PNG)
