@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parkinson Detection</title>
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='assets/img/favicon.png')}}" rel="icon">
+    <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon.png') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='assets/node_modules/morrisjs/morris.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/node_modules/c3-master/c3.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/pages/dashboard1.css')}}" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-default-dark fixed-layout">
+    <div id="main-wrapper">
+        <aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <span>Parkinson Detection</span>
+                <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i
+                        class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('homePage') }}" aria-expanded="false"><i
+                                    class="fa fa-tachometer"></i><span class="hide-menu">Home</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('predict') }}" aria-expanded="false"><i
+                                    class="fa fa-user-circle-o"></i><span class="hide-menu">Predict</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('mini_report') }}" aria-expanded="false"><i
+                                    class="fa fa-bookmark-o"></i><span class="hide-menu"></span>Report</a></li>
+
+                      
+                        <div class="text-center m-t-30">
+                            <a href=""
+                                class="btn waves-effect waves-light btn-success hidden-md-down"> Github</a>
+                        </div>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+
+                <!----------------------------------------------------------------------------------------->
+
+                <div class="content" >
+        <h1>Parkinson's Diseases Prediction</h1>
+        <!--<div class="flex-form">-->
+            <form action="/predict/" method="POST">
+                <input type="float" name="mdvp_fo" id="mdvp_fo" placeholder="MDVP:Fo(Hz) range(88,260)">
+                <input type="float" name="mdvp_fhi" id="mdvp_fhi" placeholder="MDVP:Fhi(Hz) range(102,592)">
+                <input type="float" name="mdvp_flo" id="mdvp_flo" placeholder="MDVP:Flo(Hz) range(65,240)">
+                <input type="float" name="mdvp_jitper" id="mdvp_jitper" placeholder="MDVP:Jitter(%) range(0.001, 0.033)">
+                <input type="float" name="mdvp_jitabs" id="mdvp_jitabs" placeholder="MDVP:Jitter(Abs) range(0.00002, 0.0002)">
+                <input type="float" name="mdvp_rap" id="mdvp_rap" placeholder="MDVP:RAP range(0.0006, 0.02)">
+                <input type="float" name="mdvp_ppq" id="mdvp_ppq" placeholder="MDVP:PPQ range(0.0009, 0.02)">
+                <input type="float" name="jitter_ddp" id="jitter_ddp" placeholder="Jitter:DDP range(0.002, 0.065)">
+                <input type="float" name="mdvp_shim" id="mdvp_shim" placeholder="MDVP:Shimmer range(0.009, 0.12)">
+                <input type="float" name="mdvp_shim_db" id="mdvp_shim_db" placeholder="MDVP:Shimmer(dB) range(0.085, 1.302)">
+                <input type="float" name="shimm_apq3" id="shimm_apq3" placeholder="Shimmer:APQ3 range(0.004, 0.056)">
+                <input type="float" name="shimm_apq5" id="shimm_apq5" placeholder="Shimmer:APQ5 range(0.005, 0.08)">
+                <input type="float" name="mdvp_apq" id="mdvp_apq" placeholder="MDVP:APQ range(0.007, 0.14)">
+                <input type="float" name="shimm_dda" id="shimm_dda" placeholder="Shimmer:DDA range(0.013, 0.17)">
+                <input type="float" name="nhr" id="nhr" placeholder="NHR range(0.0006, 0.31)">
+                <input type="float" name="hnr" id="hnr" placeholder="HNR range(8, 33)">
+                <input type="float" name="rpde" id="rpde" placeholder="RPDE range(0.25, 0.68)">
+                <input type="float" name="dfa" id="dfa" placeholder="DFA range(0.57, 0.82)">
+                <input type="float" name="spread1" id="spread1" placeholder="Spread1 range(-7, -2)">
+                <input type="float" name="spread2" id="spread2" placeholder="Spread2 range(0.006, 0.45)">
+                <input type="float" name="d2" id="d2" placeholder="D2 range(1.42, 3.67)">
+                <input type="float" name="ppe" id="ppe" placeholder="PPE range(0.04, 0.5)">
+
+                <button type="submit" value="Predict">Predict</button>
+            </form>
+        <!--</div>-->
+    </div>
+
+                <!----------------------------------------------------------------------------------------->
+
+            </div>
+        </div>
+
+        <footer class="footer" style="justify-content: center;">
+            © 2022 Powered by Love</a>
+        </footer>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/popper/popper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/waves.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/sidebarmenu.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/raphael/raphael-min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/morrisjs/morris.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/d3/d3.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/c3-master/c3.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/dashboard1.js')}}"></script>
+<!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</body>
+
+</html>

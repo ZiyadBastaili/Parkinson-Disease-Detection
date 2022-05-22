@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parkinson Detection</title>
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename='assets/img/favicon.png')}}" rel="icon">
+    <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static', filename='assets/css/style.css')}}" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/images/favicon.png') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', filename='assets/node_modules/morrisjs/morris.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/node_modules/c3-master/c3.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/pages/dashboard1.css')}}" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-default-dark fixed-layout">
+    <div id="main-wrapper">
+        <aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <span>Parkinson Detection </span>
+                <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i
+                        class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('homePage') }}" aria-expanded="false"><i
+                                    class="fa fa-tachometer"></i><span class="hide-menu">Home</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('predict') }}" aria-expanded="false"><i
+                                    class="fa fa-user-circle-o"></i><span class="hide-menu">Predict</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="{{ url_for('mini_report') }}" aria-expanded="false"><i
+                                    class="fa fa-bookmark-o"></i><span class="hide-menu"></span>Report</a></li>
+
+
+                        <div class="text-center m-t-30">
+                            <a href=""
+                                class="btn waves-effect waves-light btn-success hidden-md-down"> Github</a>
+                        </div>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+
+                <!----------------------------------------------------------------------------------------->
+                <!-- ======= Hero Section ======= -->
+                  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+                    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+                      <!-- Slide 1 -->
+                      <div class="carousel-item active">
+                        <div class="carousel-container">
+                          <h2 class="animate__animated animate__fadeInDown">Parkinsons Disease Detection</h2>
+                          <p class="animate__animated fanimate__adeInUp">Parkinson’s Disease Classification from Speech Data using multiple Machine Learning methods. This was implemented using scikit-learn Python package.</p>
+                          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                        </div>
+                      </div>
+
+                      <!-- Slide 2 -->
+                      <div class="carousel-item">
+                        <div class="carousel-container">
+                          <h2 class="animate__animated animate__fadeInDown">Parkinsons Data</h2>
+                          <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data" class="btn-get-started animate__animated animate__fadeInUp scrollto">Download Parkinson Data</a>
+                          <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.names" class="btn-get-started animate__animated animate__fadeInUp scrollto">Data Description</a>
+
+                        </div>
+                      </div>
+
+                      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+                      </a>
+
+                      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+                      </a>
+
+                    </div>
+
+                    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+                      <defs>
+                          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"> </path>
+                      </defs>
+                      <g class="wave1">
+                          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"> </use>
+                      </g>
+                      <g class="wave2">
+                          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"> </use>
+                      </g>
+                      <g class="wave3">
+                          <use xlink:href="#wave-path" x="50" y="9" fill="#fff"> </use>
+                      </g>
+                    </svg>
+
+                  </section>
+                <!-- End Hero -->
+
+                <main id="main">
+                    <!-- ======= Team Section ======= -->
+                    <section id="team" class="team">
+                          <div class="container">
+
+                            <div class="section-title" data-aos="zoom-out">
+                              <h2>Team</h2>
+                              <p>Our Team</p>
+                            </div>
+
+                            <div class="row" style="justify-content: center;">
+                              <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                <div class="member" data-aos="fade-up">
+                                  <div class="member-img">
+                                    <img src="{{ url_for('static', filename='assets/img/team/1.png')}}" class="img-fluid" alt="">
+                                    <div class="social">
+                                      <a href=""><i class="bi bi-twitter"></i></a>
+                                      <a href=""><i class="bi bi-facebook"></i></a>
+                                      <a href=""><i class="bi bi-instagram"></i></a>
+                                      <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                  </div>
+                                  <div class="member-info">
+                                    <h4>Ziyad BASTAILI</h4>
+                                    <span>Information System and Big Data Engineer</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                              </div>
+
+                              <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                  <div class="member-img">
+                                    <img src="{{ url_for('static', filename='assets/img/team/2.png')}}" class="img-fluid" alt="">
+                                    <div class="social">
+                                      <a href=""><i class="bi bi-twitter"></i></a>
+                                      <a href=""><i class="bi bi-facebook"></i></a>
+                                      <a href=""><i class="bi bi-instagram"></i></a>
+                                      <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                  </div>
+                                  <div class="member-info">
+                                    <h4>Manal BENCHRIF</h4>
+                                    <span>Information System and Big Data Engineer</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+
+                          </div>
+                        </section>
+                    <!-- End Team Section -->
+
+                    <!-- ======= Features Section ======= -->
+                    <section id="features" class="features">
+                      <div class="container">
+
+                        <ul class="nav nav-tabs row d-flex">
+                          <li class="nav-item col-3" data-aos="zoom-in">
+                            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                              <i class="ri-gps-line"></i>
+                              <h4 class="d-none d-lg-block">Parkinson’s disease</h4>
+                            </a>
+                          </li>
+                          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                              <i class="ri-body-scan-line"></i>
+                              <h4 class="d-none d-lg-block">Data Source</h4>
+                            </a>
+                          </li>
+                          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="200">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                              <i class="ri-sun-line"></i>
+                              <h4 class="d-none d-lg-block">Data Set Information</h4>
+                            </a>
+                          </li>
+                          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="300">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                              <i class="ri-store-line"></i>
+                              <h4 class="d-none d-lg-block">Attribute Information</h4>
+                            </a>
+                          </li>
+                        </ul>
+
+                        <div class="tab-content" data-aos="fade-up">
+                          <div class="tab-pane active show" id="tab-1">
+                            <div class="row">
+                              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h3>Parkinson’s disease</h3>
+                                <p class="fst-italic">
+                                  Parkinson’s disease was first medically described as a neurological syndrome by James Parkinson in 1817, though fragments of Parkinsonism can be found in earlier descriptions (Parkinson 1817). Parkinson’s disease is a neurodegenerative disorder of the central nervous system that causes partial or full loss of motor reflexes, speech, behavior, mental processing, and other vital functions. It is generally observed in elderly people and causes disorders in speech and motor abilities (writing, balance, etc.) of 90% of the patients.
+                                </p>
+                              </div>
+                              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                <img src="{{ url_for('static', filename='assets/img/1.png')}}" alt="" class="img-fluid">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="tab-2">
+                            <div class="row">
+                              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h3>Data Source</h3>
+                                <p>
+                                  The dataset was created by Max Little of the University of Oxford, in collaboration with the National Centre for Voice and Speech, Denver, Colorado, who recorded the speech signals. The original study published the feature extraction methods for general voice disorders.
+                                </p>
+                              </div>
+                              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                <img src="{{ url_for('static', filename='assets/img/2.gif')}}" alt="" class="img-fluid">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="tab-4">
+                            <div class="row">
+                              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h3>Attribute Information</h3>
+                                <p>
+                                  The dataset contains 22 features extracted from 31 people, of which 23 suffered from PD. As shown in Table 1, each column denotes a particular voice feature, and each row corresponds to one of 195 voice recordings from these individuals. The dataset was created by Max Little of the University of Oxford in collaboration with the National Centre for Voice and Speech, Denver, Colorado.
+                                </p>
+
+                              </div>
+                              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                <img src="{{ url_for('static', filename='assets/img/3.png')}}" alt="" class="img-fluid">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h3>Dataset Information</h3>
+                                <p>
+                                  This dataset is composed of a range of biomedical voice measurements from 31 people, 23 with Parkinson's disease (PD). Each column in the table is a particular voice measure, and each row corresponds one of 195 voice recording from these individuals ("name" column). The main aim of the data is to discriminate healthy people from those with PD, according to "status" column which is set to 0 for healthy and 1 for PD.
+                                  The data is in ASCII CSV format. The rows of the CSV file contain an instance corresponding to one voice recording. There are around six recordings per patient, the name of the patient is identified in the first column.For further information or to pass on comments, please contact Max Little (littlem '@' robots.ox.ac.uk).
+                                  Further details are contained in the following reference -- if you use this dataset, please cite:
+                                  Max A. Little, Patrick E. McSharry, Eric J. Hunter, Lorraine O. Ramig (2008), 'Suitability of dysphonia measurements for telemonitoring of Parkinson's disease', IEEE Transactions on Biomedical Engineering (to appear).
+                                </p>
+
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </section>
+                    <!-- End Features Section -->
+
+                    <!-- ======= About Section ======= -->
+                    <section id="about" class="about">
+                      <div class="container">
+                        <div class="section-title" data-aos="zoom-out">
+                          <h2>About</h2>
+                          <p>ABOUT THE PROJECT</p>
+                        </div>
+                        <div class="row content" data-aos="fade-up">
+                          <div class="col-lg-6">
+                            <p>
+                              Our project is titled Detection Of Parkinson’s Disease, which is ranked second for the most common
+                                neurological disorder. Within more than seven million people that suffer from PD worldwide, between 75 and
+                                90 will develop speech and voice problems. Patients can receive the proper treatment when diagnosing PD is
+                                accurate. For that this paper poses a classification problem, which aims to classify healthy people and Parkinson
+                                suffering people using data mining of biomedical voice measurements. In this context, eleven types of classifiers
+                                based on :
+                            </p>
+                            <ul>
+                              <li><i class="ri-check-double-line"></i> Random Forest Classifier</li>
+                              <li><i class="ri-check-double-line"></i> XGB Classifier</li>
+                              <li><i class="ri-check-double-line"></i> MLP Classifier</li>
+                              <li><i class="ri-check-double-line"></i> Logistic Regression</li>
+                              <li><i class="ri-check-double-line"></i> Decision Tree Classifier</li>
+                              <li><i class="ri-check-double-line"></i> KNeighbors Classifier</li>
+                            </ul>
+                          </div>
+                          <div class="col-lg-6 pt-4 pt-lg-0">
+                              <ul>
+                              <li><i class="ri-check-double-line"></i> Gaussian NB</li>
+                              <li><i class="ri-check-double-line"></i> AdaBoost Classifier</li>
+                              <li><i class="ri-check-double-line"></i> Linear Regression</li>
+                              <li><i class="ri-check-double-line"></i> Quadratic Discriminant Analysis</li>
+                              <li><i class="ri-check-double-line"></i> Support Vector Machine</li>
+
+                              </ul>
+                            <p>
+                              are used to classify the UCI ML Parkinson Data Set. The data set used in this study is a real one with multivariate,
+                                comprises a range of voice signals from 195 people: 147 with PD and 48 healthy people. In the purpose to
+                                detect PD, select feature and hyperparameters methods are used. The results show that for the select feature
+                                method, within 23 variables the number of selected feature is 5 according to Variance Threshold and 3 according
+                                to Pearson correlation. And for the hyperparameters method, Logistic Regression gives high accuracy of 97.4%,
+                                followed by RandomForestClassifier with an accuracy of 94.8%. To carry out this project the technology used
+                                are: Flask, Python
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <div style="justify-content: center; display:flex;">
+                      <img src="{{ url_for('static', filename='assets/img/4.jpeg')}}" alt="" class="img-fluid">
+                    </div>
+
+                    <!-- End About Section -->
+                </main>
+
+                <!----------------------------------------------------------------------------------------->
+
+            </div>
+        </div>
+
+        <footer class="footer" style="justify-content: center;">
+            © 2022 Powered by Love</a>
+        </footer>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/popper/popper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/waves.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/sidebarmenu.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/raphael/raphael-min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/morrisjs/morris.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/d3/d3.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/node_modules/c3-master/c3.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/dashboard1.js')}}"></script>
+<!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+</body>
+
+</html>
