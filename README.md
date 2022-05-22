@@ -38,17 +38,17 @@ The dataset contains 22 features extracted from 31 people, of which 23 suffered 
  ![enter image description here](/static/assets/img/3.png)
 
 ## ABOUT THE PROJECT
- ![enter image description here](/static/assets/img/about.png)
+ ![enter image description here](/static/assets/img/about.PNG)
 
 ## TEAM
- ![enter image description here](/static/assets/img/demo/3.png)
+ ![enter image description here](/static/assets/img/demo/3.PNG)
 
 ## DEMO
- ![enter image description here](/static/assets/img/demo/1.png)
- ![enter image description here](/static/assets/img/demo/2.png)
- ![enter image description here](/static/assets/img/demo/4.png)
- ![enter image description here](/static/assets/img/demo/5.png)
- ![enter image description here](/static/assets/img/demo/6.png)
- ![enter image description here](/static/assets/img/demo/7.png)
- ![enter image description here](/static/assets/img/demo/8.png)
+ ![enter image description here](/static/assets/img/demo/1.PNG)
+ ![enter image description here](/static/assets/img/demo/2.PNG)
+ ![enter image description here](/static/assets/img/demo/4.PNG)
+ ![enter image description here](/static/assets/img/demo/5.PNG)
+ ![enter image description here](/static/assets/img/demo/6.PNG)
+ ![enter image description here](/static/assets/img/demo/7.PNG)
+ ![enter image description here](/static/assets/img/demo/8.PNG)
 
