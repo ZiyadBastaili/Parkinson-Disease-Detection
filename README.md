@@ -44,7 +44,7 @@ The dataset contains 22 features extracted from 31 people, of which 23 suffered 
  ![enter image description here](/static/assets/img/demo/3.PNG)
 
 ## DEMO
- #### [COLAB NOTEBOOK] (https://colab.research.google.com/drive/1j1KQ96Q4U5ERD8YXG33S--f3k0DmEEkZ?usp=sharing)
+ #### [COLAB NOTEBOOK](https://colab.research.google.com/drive/1j1KQ96Q4U5ERD8YXG33S--f3k0DmEEkZ?usp=sharing)
  ![enter image description here](/static/assets/img/demo/9.PNG)
  ![enter image description here](/static/assets/img/demo/1.PNG)
  ![enter image description here](/static/assets/img/demo/2.PNG)
